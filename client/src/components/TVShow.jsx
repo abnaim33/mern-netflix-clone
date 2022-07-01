@@ -15,7 +15,7 @@ import { onAuthStateChanged } from 'firebase/auth'
 import { firebaseAuth } from '../utils/firebase'
 import NotAvailable from './NotAvailble'
 import SelectGenre from './SelectGenre'
-const Movies = () => {
+const TVShow = () => {
 
     const navigate = useNavigate()
     const [isScrolled, setIsScrolled] = useState(false)
@@ -40,7 +40,7 @@ const Movies = () => {
 
     useEffect(() => {
         if (genresLoaded) {
-            dispatch(fetchMovies({ type: "all" }));
+            dispatch(fetchMovies({ type: "tv" }));
             console.log('genresLoaded')
         }
     }, [genresLoaded]);
@@ -58,7 +58,7 @@ const Movies = () => {
 
             <div className="data">
 
-                <SelectGenre genres={genres} type="movie" />
+                <SelectGenre genres={genres} type="tv" />
 
                 {
                     movies.length ? <Slider movies={movies} /> :
@@ -80,4 +80,4 @@ const Container = styled.div`
 }
 `
 
-export default Movies
+export default TVShow

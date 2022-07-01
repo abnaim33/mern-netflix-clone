@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { fetchDataByGenre } from "../store/store";
 export default function SelectGenre({ genres, type }) {
     const dispatch = useDispatch();
+    // console.log(genres, type, 'select genres')
     return (
         <Select
             className="flex"

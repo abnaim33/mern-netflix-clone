@@ -5,6 +5,8 @@ import Signup from "./components/Signup";
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Player from "./components/Player";
 import Movies from "./components/Movies";
+import TVShow from "./components/TVShow";
+import MyList from "./components/MyList";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Route exact path="/" element={<Netflix />} />
         <Route exact path="/player" element={<Player />} />
         <Route exact path="/movies" element={<Movies />} />
+        <Route exact path="/tv" element={<TVShow />} />
+        <Route exact path="/mylist" element={<MyList />} />
       </Routes>
     </BrowserRouter>
   );

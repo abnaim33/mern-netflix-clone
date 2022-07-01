@@ -8,7 +8,7 @@ import styled from "styled-components";
 import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 // import { getGenres } fro../store/storeore'
-import axios from 'axios'
+// import axios from 'axios'
 import { fetchMovies, getGenres } from '../store/store'
 import Slider from './Slider'
 
@@ -16,10 +16,10 @@ const Netflix = () => {
     const navigate = useNavigate()
     const [isScrolled, setIsScrolled] = useState(false)
     const movies = useSelector((state) => state.netflix.movies);
-    const genres = useSelector((state) => state.netflix.genres);
+    // const genres = useSelector((state) => state.netflix.genres);
     const genresLoaded = useSelector((state) => state.netflix.genresLoaded)
 
-    console.log(movies, 'movies')
+
 
     window.onscroll = () => {
         setIsScrolled(window.pageYOffset === 0 ? false : true)
@@ -43,7 +43,7 @@ const Netflix = () => {
 
     // https://api.themoviedb.org/3/movie/76341?api_key=<<api_key>>
 
-    console.log(genresLoaded, 'genres')
+
     return (
         <Container>
             <Navbar isScrolled={isScrolled} />
